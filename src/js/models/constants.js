@@ -5,15 +5,18 @@ export const instructions = [
     "YOU CAN PLACE THE TILE BACK WHATEVER YOU WANT"
 ]; 
 export const tools = [
-    {name : "Shovel", picture:"/assets/images/shovel.webp" ,tile :"dirt"},
-    {name : "Axe", picture:"/assets/images/axe.webp" ,tile :"tree"},
-    {name : "Pickaxe", picture:"/assets/images/pickaxe.webp" ,tile :"stone"}
+    {name : "Shovel", picture:"/assets/images/shovel.webp" ,tile :["dirt","grassDirt"]},
+    {name : "Axe", picture:"/assets/images/axe.webp" ,tile :["tree","grass"]},
+    {name : "Pickaxe", picture:"/assets/images/pickaxe.webp" ,tile :["stone"]},
+    {name : "Vacuum", picture:"/assets/images/vacuum.png" ,tile :["white"]},
+    {name : "Inventory", picture:"/assets/images/inventoryClosed.png" ,tile :"none"}
 ]
 export const tiles = [ 
-    {name:"stone", picture: "/assets/images/stone.jpg"}, 
+    {name:"stone", picture: "/assets/images/stone.png"}, 
     {name:"grass", picture: "/assets/images/grass.png"}, 
-    {name :"tree", picture: "/assets/images/tree.jpg"}, 
-    {name :"dirt-grass", picture: "/assets/images/grass-dirt.png"}, 
-    {name :"sky", picture: "/assets/images/sky.png"},
+    {name :"tree", picture: "/assets/images/tree.png"}, 
+    {name :"grassDirt", picture: "/assets/images/grassDirt.png"}, 
+    {name :"dirt", picture: "/assets/images/dirt.png"},
+    {name :"white", picture: "/assets/images/white.png"},
 ]
 

@@ -2,6 +2,10 @@
     font-family: 'minecraft';
     src: url('/assets/fonts/minecraft-font/MinecraftBold-nMK1.otf') format('woff2')
 }
+*{
+    margin: 0;
+    padding: 0;
+}
 
 body {
     display: flex;
@@ -13,13 +17,15 @@ body {
     margin: 0;
 }
 
+
 #game-board {
-    height: 80vmin;
-    width: 200vmin;
-    display: grid;
-    background-color: grey;
-    /* grid-template-columns: repeat(20, 1fr);
-    grid-template-rows: repeat(20, 1fr); */
+    height: 88.5vmin;
+    width: 197.21vmin;
+    display: flex;
+    background-color: #8f7764;
+    border-radius: 1vmin;
+    border-top-right-radius: 0vmin;
+    border-bottom-right-radius: 0vmin;
 }
 
 .background-img {
@@ -33,48 +39,135 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'minecraft';
-    font-size: 25px;
-    margin: 60px 0px 0px 250px;
+    font-size: 3vmin;
+    margin: 10vmin 0vmin 0vmin 25vmin;
     color: #3B241C;
 }
 
 .start-btn {
-    width: 150px;
-    height: 100px;
+    width: 25vmin;
+    height: 15vmin;
     margin: auto;
-    margin-bottom: 70px;
+    top: 73vmin;
+    left: 92vmin;
+    position: absolute;
     border: none;
     background-color: #8f7764;
     border: none;
-    border-radius: 10px;
-    font-size: 30px;
+    border-radius: 2vmin;
+    font-size: 5vmin;
     font-family: "minecraft";
+    color: #3B241C;
+    box-shadow: 1vmin 1.5vmin;
 }
 
 .start-btn:hover {
-    background-color: #3B241C;
+    background-color: #524643;
     cursor: pointer;
+    width: 24vmin;
+    height: 14vmin;
+    top: 74vmin;
+    left: 93vmin;
+    box-shadow: .5vmin 1vmin;
+
 }
 
 .tool-container {
     display: flex;
     flex-direction: column;
     background-color: #8f7764;
-    width: 17vmin;
-    height: 44.5vmin;
-    border-radius: 10px;
+    width: 12vmin;
+    height: auto;
+    border-radius: 2vmin;
 }
 
 .tool-div img {
-    height: 13vmin;
-    width: 13vmin;
+    height: 11vmin;
+    width: 11vmin;
 }
 
 .tool-div {
-    border: 3px solid white;
+    border-bottom: .3vmin solid white;
+    border-radius: 1vmin;
 }
 
 .tool-div:hover {
     cursor: pointer;
-    background-color: #5b5047 ;
+    background-color: #5b5047;
+}
+
+.tiles-board {
+    height: 88.3vmin;
+    width: 183vmin;
+    background-color: #6093f1;
+    display: grid;
+    grid-template-columns: repeat(30, 1fr);
+    grid-template-rows: repeat(15, 1fr);
+    margin-left: 2vmin;
+}
+
+.tile {
+    height: 5.9vmin;
+    width: 6.1vmin;
+}
+
+.tile:hover {
+    border: 0.1vmin solid rgb(224, 218, 218);
+    height: 5.5vmin;
+    width: 5.7vmin;
+}
+
+#inventory {
+    padding-top: 2vmin;
+    padding-bottom: 1vmin;
+    padding-left: 0.8vmin;
+}
+
+.inventory-list {
+    width: 35vmin;
+    height: 35vmin;
+    background-color: #8f7764;
+    position: absolute;
+    top: 47vmin;
+    left: 25vmin;
+    border-radius: 2vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1vmin 1.5vmin;
+}
+
+.inventory-list img {
+    height: 7vmin;
+    width: 7vmin;
+}
+
+.inventory-list div {
+    padding: 2vmin;
+}
+
+.inventory-list p {
+    margin-left: 1.3vmin;
+    font-family: "minecraft";
+    font-size: 3vmin;
+    padding-top: 1vmin;
+}
+.inventory-list div:hover {
+    background-color: #a29387;
+    cursor: pointer;
+    border-radius: 2vmin;
+}
+.reset-btn { 
+    font-family: "minecraft";
+    padding : 2vmin; 
+    font-size: 2.5vmin;
+    border: none;
+    background-color: #a29387;
+    margin-top: 10vmin;
+    margin-left: 1vmin;;
+}
+.reset-btn:hover {
+    cursor: pointer;
+    background-color:#5b5047;
 }
