@@ -40,7 +40,6 @@ export class UI {
         tools.forEach(tool => {
             const toolDiv = document.createElement("div");
             const toolIcon = document.createElement("img");
-            console.log(tool.getPicture());
             toolIcon.src = tool.getPicture();
             toolDiv.classList.add("tool-div");
             toolDiv.appendChild(toolIcon);
@@ -90,7 +89,6 @@ export class UI {
         newIcon.src = "/assets/images/inventory-icon.png";
         this.inventoryList.classList.add("inventory-list");
         for (const key in inventory) {
-            console.log(key);
             let tile = document.createElement("img");
             tile.src = `/assets/images/${key}.png`;
             tile.setAttribute("type", `${key}`);
@@ -122,5 +120,6 @@ export class UI {
         this.toolContainer.appendChild(btn);
         return btn; 
     }
+
 
 }

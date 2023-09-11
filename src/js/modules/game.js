@@ -10,6 +10,7 @@ export class Game {
         this.ui = new UI();
         this.initializeEventListeners();
         this.player = new Player();
+        
     }
     initializeEventListeners() {
         const startBtn = this.ui.setStartBtn();
@@ -57,7 +58,6 @@ export class Game {
                     this.ui.closeInventory();
                 else this.ui.openInventory(this.player.getInventory()).addEventListener("click", (event) => {
                     if (this.player.selectInventory(event.target)) {
-                        console.log(event.target.getAttribute("type"));
                         this.ui.changeCursor(event.target.getAttribute("type"));
                         this.ui.closeInventory();
                     };
@@ -80,9 +80,8 @@ export class Game {
     }
     createReset(){
         this.ui.resetBtn().addEventListener("click", (event)=>{
-            this.player.resetInventory(); 
-            this.ui.clearGameBoard();
-            this.startGame();
+            window.location.reload();
+
         }); 
     }
 

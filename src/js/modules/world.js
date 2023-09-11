@@ -15,8 +15,10 @@ export class World {
                 this.worldBoard[j][i] = 0;
             }
         }
-        this.worldBoard[2].splice(13, 2, this.white.getName(), this.white.getName());
-        this.worldBoard[3].splice(12, 4, this.white.getName(), this.white.getName(), this.white.getName(), this.white.getName());
+        this.worldBoard[2].splice(11, 2, this.white.getName(), this.white.getName());
+        this.worldBoard[3].splice(10, 4, this.white.getName(), this.white.getName(), this.white.getName(), this.white.getName());
+        this.worldBoard[2].splice(24, 2, this.white.getName(), this.white.getName());
+        this.worldBoard[3].splice(23, 4, this.white.getName(), this.white.getName(), this.white.getName(), this.white.getName());
         this.worldBoard[3].splice(4, 3, this.grass.getName(), this.grass.getName(), this.grass.getName());
         this.worldBoard[4].splice(4, 3, this.grass.getName(), this.grass.getName(), this.grass.getName());
         this.worldBoard[5].splice(4, 3, this.grass.getName(), this.grass.getName(), this.grass.getName());
@@ -48,17 +50,14 @@ export class World {
         let j = tile.style.gridRowStart - 1;
         let i = tile.style.gridColumnStart - 1;
         this.worldBoard[j][i] = 0;
-        console.log(tile.style.gridRowStart, tile.style.gridColumnStart);
     }
     addTile(target, tile) {
-        let j = target.style.gridRowStart-1;
-        let i = target.style.gridColumnStart-1;
+        let j = target.style.gridRowStart - 1;
+        let i = target.style.gridColumnStart - 1;
         if (this.worldBoard[j][i] === 0) {
-            this.worldBoard[j][i] = tile; 
-            return true; 
+            this.worldBoard[j][i] = tile;
+            return true;
         }
-        else return false; 
+        else return false;
     }
-
-
 }

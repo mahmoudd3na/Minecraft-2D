@@ -28,7 +28,6 @@ export class Player {
     }
     selectInventory(tile) {
         const key = tile.getAttribute("type");
-        console.log(tile);
         if (this.inventory[key] === 0) {
             tile.style.border = "0.5vmin red solid";
             setTimeout(() => {
@@ -37,7 +36,6 @@ export class Player {
         }
         else {
             this.selectedTile = tile.getAttribute("type");
-            console.log(this.selectedTile);
             this.selectedTool = false;
             return true;
         }
@@ -56,8 +54,13 @@ export class Player {
         return this.inventory;
     }
     resetInventory(){
-        for(const key in this.inventory){
-            this.inventory[key] = 0; 
+        this.inventory = {
+            stone: 0,
+            dirt: 0,
+            grass: 0,
+            grassDirt: 0,
+            tree: 0,
+            white: 0
         }
     }
 }
